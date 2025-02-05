@@ -1,7 +1,7 @@
 // Iteration 1: Rocket Class
 class Rocket {
-  // Constructor should take a name parameter
   // Add a private property #fuel (initialize to 100)
+  // Constructor should take a name parameter
   // Add a private method #burnFuel(amount) to decrease fuel
   // Add a public method launch() that checks fuel before launching
 }
