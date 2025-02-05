@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Mission</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Instructions</h2>
+    <p>
+      Follow the instructions below to complete the Space Mission exercise. Make sure to open the developer tools, to check on any potential errors
+      and logs in the terminal.
+    </p>
+
+    <hr />
+
+    <div>
+      <h3>Iteration 1: Rocket</h3>
+      <ul>
+        <li>Create a <span>Rocket</span> class.</li>
+        <li>Add a public property <span>name</span> (from constructor argument).</li>
+        <li>Add a private property <span>#fuel</span> (initialized to 100).</li>
+        <li>Add a private method <span>#burnFuel(amount)</span> to decrease fuel.</li>
+        <li>
+          Add a public method <span>launch()</span> that checks fuel before launching. The rocket should only launch, if it has at least 50 fuel.
+          Launching should burnFuel by 50. Depending on the success of failure, should return a string with the shape: "{NAME} has launched into
+          space." or "{NAME} cannot launch due to low fuel"
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h3>Iteration 2: Mission Control</h3>
+      <ul>
+        <li>Create a <span>MissionControl</span> class with a static property <span>rocketsLaunched.</span> Initialize it as 0.</li>
+        <li>
+          Add a static method <span>registerLaunch(rocket)</span> to launch rockets. It should receive the rocket object as an argument, call the
+          <span>launch()</span> method of the rocket object, saving the return in a message variable, log it, and increment the
+          <span>rocketsLaunched</span> static property, if the launch was successful.
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h3>Iteration 3: Running the Simulation</h3>
+      <ul>
+        <li>Create two <span>Rocket</span> objects.</li>
+        <li>Call <span>MissionControl.registerLaunch()</span> for each rocket.</li>
+        <li>Try launching a rocket again to check fuel behavior.</li>
+        <li>
+          Log the total launches using
+          <span>MissionControl.rocketsLaunched</span>.
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>Expected Output</h2>
+      <pre class="code">
+*** TEST 1: Launch Attempts ***
+Falcon 9 has launched into space!
+Starship has launched into space!
+Falcon 9 cannot launch due to low fuel!
+
+*** TEST 2: Rockets Launched Count ***
+Total successful launches: 2
+        </pre
+      >
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
